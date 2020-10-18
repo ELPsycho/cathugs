@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"/>
+
+    <script>
+        var count=0, mesage="";
+    </script>
+</head>
+    <body>
+        <div style="text-align:center">
+            <p class="text">Нажмите на изображение, чтобы погладить котика</p>
+            <p class="text" id="rez"></p>
+            <img class="image" src="./image/cat.jpg" alt="litle cat" onclick="count++;
+            if(count==1)
+            {mesage='Вы погладили котика только раз. Этого надостаточно'}
+            else if(count>=2 && count<=10)
+            {mesage='Вы погладили котика \ '+ count +' \ раз. Можете больше?';}
+            else
+            {mesage='Браво! Вы настойчивы! Котик очень рад, что вы погладили его \ ' + count + ' \ раз.'}
+            document.getElementById('rez').innerHTML=mesage;">
+        </div>
+       </body>
+</html>
